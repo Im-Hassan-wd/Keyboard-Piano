@@ -24,6 +24,14 @@ window.addEventListener("keydown",(e) => {
     const key = e.key; 
     createNote()
 
+    if(audio.play !== undefined) {
+        audio.play().then(_ => {
+            console.log("play the piano");
+        }).catch(err => {
+            audio.currentTime = 0; 
+        })
+    }
+
     switch (key) {
         case 'a': 
             audio.currentTime = 0; 
@@ -66,9 +74,9 @@ window.addEventListener("keydown",(e) => {
             audio.play();
             break;
         case 'i':
-            audio.currentTime = 0;  
             audio.src = tones[8];
             audio.play();
+            audio.currentTime = 0;  
             break;
         case 'j':
             audio.currentTime = 0;  
@@ -166,8 +174,7 @@ window.addEventListener("keydown",(e) => {
         note.style.animation = 'jump 1s ease';
         note.addEventListener('animationend', () => {
             visual.removeChild(note);
-        })
-        // note.addEventListener('animationend')
+        });
 
     };
 
