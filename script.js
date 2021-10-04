@@ -1,49 +1,30 @@
-const audio = document.querySelector('audio');
+const tones = document.querySelectorAll('audio');
 const visual = document.querySelector(".visual");
 
-const tones = [
-    'tones/316898__jaz-the-man-2__do.wav',
-    'tones/316908__jaz-the-man-2__re.wav',
-    'tones/316906__jaz-the-man-2__mi.wav',
-    'tones/316904__jaz-the-man-2__fa.wav',
-    'tones/316912__jaz-the-man-2__sol.wav',
-    'tones/316902__jaz-the-man-2__la.wav',
-    'tones/316913__jaz-the-man-2__si.wav',
-    'tones/316901__jaz-the-man-2__do-octave.wav',
-    'tones/316899__jaz-the-man-2__do-stretched.wav',
-    'tones/316909__jaz-the-man-2__re-stretched.wav',
-    'tones/316907__jaz-the-man-2__mi-stretched.wav',
-    'tones/316905__jaz-the-man-2__fa-stretched.wav',
-    'tones/316911__jaz-the-man-2__sol-stretched.wav',
-    'tones/316903__jaz-the-man-2__la-stretched.wav',
-    'tones/316910__jaz-the-man-2__si-stretched.wav',
-    'tones/316900__jaz-the-man-2__do-stretched-octave.wav'
-];
-
 window.addEventListener("keydown",(e) => {
-    const key = e.key; 
+    const key = e.key;
 
-    switch (key) {
+    tones.forEach((tone, i) => {
+       switch (key) {
+
         case 'a': 
-            audio.currentTime = 0; 
-            audio.src = tones[0];
-            audio.play();
+            tones[0].currentTime = 0;
+            tones[0].play();
             createNote();
+            break;
         case 'b':
-            audio.currentTime = 0;  
-            audio.src = tones[1];
-            audio.play();
+            tones[1].currentTime = 0;
+            tones[1].play();
             createNote();
             break;
         case 'c':
-            audio.currentTime = 0;  
-            audio.src = tones[2];
-            audio.play();
+            tones[1].currentTime = 0;
+            tones[1].play();
             createNote();
             break;
         case 'd':
-            audio.currentTime = 0;  
-            audio.src = tones[3];
+            tones[1].currentTime = 0;
+            tones[1].play();
             audio.play();
             createNote();
             break;
@@ -132,9 +113,7 @@ window.addEventListener("keydown",(e) => {
             createNote();
             break;
         case 's':
-            audio.currentTime = 0;  
-            audio.src = tones[2];
-            audio.play();
+                        tones[1].play();
             createNote();
             break;
         case 't':
@@ -179,20 +158,20 @@ window.addEventListener("keydown",(e) => {
             audio.play();
             createNote();
             break;
-            
-    }
-
-    //create music notes
-    function createNote() {
-        const note = document.createElement('img');
-        visual.appendChild(note);
-        note.src = './note/music-note-beamed.svg';
-        note.style.animation = 'jump 1s ease';
-        note.addEventListener('animationend', () => {
-            visual.removeChild(note);
-        });
-
-    };
-
-
+       }
+    });
 });
+
+
+
+//create music notes
+function createNote() {
+    const note = document.createElement('img');
+    visual.appendChild(note);
+    note.src = './note/music-note-beamed.svg';
+    note.style.animation = 'jump 1s ease';
+    note.addEventListener('animationend', () => {
+        visual.removeChild(note);
+    });
+
+};
