@@ -18,144 +18,128 @@ window.addEventListener("keydown",(e) => {
             createNote();
             break;
         case 'c':
-            tones[1].currentTime = 0;
-            tones[1].play();
+            tones[2].currentTime = 0;
+            tones[2].play();
             createNote();
             break;
         case 'd':
-            tones[1].currentTime = 0;
-            tones[1].play();
-            audio.play();
+            tones[3].currentTime = 0;
+            tones[3].play();
             createNote();
             break;
         case 'e':
-            audio.currentTime = 0;  
-            audio.src = tones[4];
-            audio.play();
+            tones[4].currentTime = 0;
+            tones[4].play();
             createNote();
             break;
         case 'f':
-            audio.currentTime = 0;  
-            audio.src = tones[5];
-            audio.play();
+            tones[5].currentTime = 0;
+            tones[5].play();
             createNote();
             break;
         case 'g':
-            audio.currentTime = 0;  
-            audio.src = tones[6];
-            audio.play();
+            tones[6].currentTime = 0;
+            tones[6].play();
             createNote();
             break;
         case 'h':
-            audio.currentTime = 0;  
-            audio.src = tones[7];
-            audio.play();
+            tones[7].currentTime = 0;
+            tones[7].play();
             createNote();
             break;
         case 'i':
-            audio.src = tones[8];
-            audio.play();
+            tones[8].currentTime = 0;  
+            tones[8].play();
             createNote();
-            audio.currentTime = 0;  
             break;
         case 'j':
-            audio.currentTime = 0;  
-            audio.src = tones[9];
-            audio.play();
+            tones[9].currentTime = 0;
+            tones[9].play();
             createNote();
             break;
         case 'k':
-            audio.currentTime = 0;  
-            audio.src = tones[10];
-            audio.play();
+            tones[10].currentTime = 0; 
+            tones[10].play();
             createNote();
             break;
         case 'l':
-            audio.currentTime = 0;  
-            audio.src = tones[11];
-            audio.play();
+            tones[11].currentTime = 0;  
+            tones[11].play();
             createNote();
             break;
         case 'm':
-            audio.currentTime = 0;  
-            audio.src = tones[12];
-            audio.play();
+            tones[12].currentTime = 0; 
+            tones[12].play();
             createNote();
             break;
         case 'n':
-            audio.currentTime = 0;  
-            audio.src = tones[13];
-            audio.play();
+            tones[13].currentTime = 0;  
+            tones[13].play();
             createNote();
             break;
         case 'o':
-            audio.currentTime = 0;  
-            audio.src = tones[14];
-            audio.play();
+            tones[14].currentTime = 0;  
+            tones[14].play();
             createNote();
             break;
         case 'p':
-            audio.currentTime = 0;  
-            audio.src = tones[15];
-            audio.play();
+            tones[15].currentTime = 0;  
+            tones[15].play();
             createNote();
             break;
         case 'q':
-            audio.currentTime = 0;  
-            audio.src = tones[0];
-            audio.play();
+            tones[0].currentTime = 0;             
+            tones[0].play();
             createNote();
             break;
         case 'r':
-            audio.currentTime = 0;  
-            audio.src = tones[1];
-            audio.play();
+            tones[1].currentTime = 0;              
+            tones[1].play();
             createNote();
             break;
         case 's':
-                        tones[1].play();
+            tones[2].currentTime = 0;              
+            tones[2].play();
             createNote();
             break;
         case 't':
-            audio.currentTime = 0;  
-            audio.src = tones[3];
-            audio.play();
+            tones[3].currentTime = 0;              
+            tones[3].play();
             createNote();
             break;
         case 'u':
-            audio.currentTime = 0;  
-            audio.src = tones[4];
-            audio.play();
+            tones[4].currentTime = 0;              
+            tones[4].play();
             createNote();
             break;
         case 'v':
-            audio.currentTime = 0;  
-            audio.src = tones[5];
-            audio.play();
+            tones[5].currentTime = 0;              
+            tones[5].play();
             createNote();
             break;
         case 'w':
-            audio.currentTime = 0;  
-            audio.src = tones[6];
-            audio.play();
+            tones[6].currentTime = 0;              
+            tones[6].play();
             createNote();
             break;
         case 'x':
-            audio.currentTime = 0;  
-            audio.src = tones[7];
-            audio.play();
+            tones[7].currentTime = 0;              
+            tones[7].play();
             createNote();
             break;
         case 'y':
-            audio.currentTime = 0;  
-            audio.src = tones[8];
-            audio.play();
+            tones[8].currentTime = 0;              
+            tones[8].play();
             createNote();
             break;
         case 'z':
-            audio.currentTime = 0;  
-            audio.src = tones[9];
-            audio.play();
+            tones[9].currentTime = 0;              
+            tones[9].play();
+            createNote();
+            break;
+        case ' ':
+            tones[0].currentTime = 0;              
+            tones[0].play();
             createNote();
             break;
        }
