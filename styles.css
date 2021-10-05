@@ -29,11 +29,21 @@
   bottom: 10px;
 }
 
+input {
+  display: none;
+}
+
 @keyframes jump {
   from {
     bottom: 0%;
   }
   to {
     bottom: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  input {
+    display: block;
   }
 }
