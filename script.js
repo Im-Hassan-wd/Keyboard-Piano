@@ -10,7 +10,7 @@ window.addEventListener("keydown",(e) => {
         case 'a': 
             tones[0].currentTime = 0;
             tones[0].play();
-            createNote();
+            createBeam();
             break;
         case 'b':
             tones[1].currentTime = 0;
@@ -20,7 +20,7 @@ window.addEventListener("keydown",(e) => {
         case 'c':
             tones[2].currentTime = 0;
             tones[2].play();
-            createNote();
+            createBeam();
             break;
         case 'd':
             tones[3].currentTime = 0;
@@ -30,7 +30,7 @@ window.addEventListener("keydown",(e) => {
         case 'e':
             tones[4].currentTime = 0;
             tones[4].play();
-            createNote();
+            createBeam();
             break;
         case 'f':
             tones[5].currentTime = 0;
@@ -40,7 +40,7 @@ window.addEventListener("keydown",(e) => {
         case 'g':
             tones[6].currentTime = 0;
             tones[6].play();
-            createNote();
+            createBeam();
             break;
         case 'h':
             tones[7].currentTime = 0;
@@ -50,7 +50,7 @@ window.addEventListener("keydown",(e) => {
         case 'i':
             tones[8].currentTime = 0;  
             tones[8].play();
-            createNote();
+            createBeam();
             break;
         case 'j':
             tones[9].currentTime = 0;
@@ -60,7 +60,7 @@ window.addEventListener("keydown",(e) => {
         case 'k':
             tones[10].currentTime = 0; 
             tones[10].play();
-            createNote();
+            createBeam();
             break;
         case 'l':
             tones[11].currentTime = 0;  
@@ -70,7 +70,7 @@ window.addEventListener("keydown",(e) => {
         case 'm':
             tones[12].currentTime = 0; 
             tones[12].play();
-            createNote();
+            createBeam();
             break;
         case 'n':
             tones[13].currentTime = 0;  
@@ -80,7 +80,7 @@ window.addEventListener("keydown",(e) => {
         case 'o':
             tones[14].currentTime = 0;  
             tones[14].play();
-            createNote();
+            createBeam();
             break;
         case 'p':
             tones[15].currentTime = 0;  
@@ -90,7 +90,7 @@ window.addEventListener("keydown",(e) => {
         case 'q':
             tones[0].currentTime = 0;             
             tones[0].play();
-            createNote();
+            createBeam();
             break;
         case 'r':
             tones[1].currentTime = 0;              
@@ -100,7 +100,7 @@ window.addEventListener("keydown",(e) => {
         case 's':
             tones[2].currentTime = 0;              
             tones[2].play();
-            createNote();
+            createBeam();
             break;
         case 't':
             tones[3].currentTime = 0;              
@@ -110,7 +110,7 @@ window.addEventListener("keydown",(e) => {
         case 'u':
             tones[4].currentTime = 0;              
             tones[4].play();
-            createNote();
+            createBeam();
             break;
         case 'v':
             tones[5].currentTime = 0;              
@@ -120,7 +120,7 @@ window.addEventListener("keydown",(e) => {
         case 'w':
             tones[6].currentTime = 0;              
             tones[6].play();
-            createNote();
+            createBeam();
             break;
         case 'x':
             tones[7].currentTime = 0;              
@@ -130,17 +130,17 @@ window.addEventListener("keydown",(e) => {
         case 'y':
             tones[8].currentTime = 0;              
             tones[8].play();
-            createNote();
+            createBeam();
             break;
         case 'z':
             tones[9].currentTime = 0;              
             tones[9].play();
-            createNote();
+            createNote()
             break;
         case ' ':
             tones[0].currentTime = 0;              
             tones[0].play();
-            createNote();
+            createBeam();
             break;
        }
     });
@@ -149,13 +149,21 @@ window.addEventListener("keydown",(e) => {
 
 
 //create music notes
+function createBeam() {
+    const beam = document.createElement('img');
+    visual.appendChild(beam);
+    beam.src = './note/music-note-beamed.svg';
+    beam.style.animation = 'slide 2s linear';
+    beam.addEventListener('animationend', () => {
+        visual.removeChild(beam);
+    });
+};
 function createNote() {
     const note = document.createElement('img');
     visual.appendChild(note);
-    note.src = './note/music-note-beamed.svg';
-    note.style.animation = 'jump 1s ease';
+    note.src = './note/music-note.svg';
+    note.style.animation = 'slide 2s linear';
     note.addEventListener('animationend', () => {
         visual.removeChild(note);
     });
-
 };
