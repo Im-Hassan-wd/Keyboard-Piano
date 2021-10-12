@@ -148,22 +148,23 @@ window.addEventListener("keydown",(e) => {
 
 
 
-//create music notes
-function createBeam() {
-    const beam = document.createElement('img');
-    visual.appendChild(beam);
-    beam.src = './note/music-note-beamed.svg';
-    beam.style.animation = 'slide 2s linear';
-    beam.addEventListener('animationend', () => {
-        visual.removeChild(beam);
-    });
-};
-function createNote() {
-    const note = document.createElement('img');
-    visual.appendChild(note);
-    note.src = './note/music-note.svg';
-    note.style.animation = 'slide 2s linear';
-    note.addEventListener('animationend', () => {
-        visual.removeChild(note);
-    });
-};
+//create tone notes
+// function createBeam() {
+//     const beam = document.createElement('img');
+//     visual.appendChild(beam);
+//     beam.src = './note/music-note-beamed.svg';
+//     beam.style.animation = 'slide 2s linear';
+//     beam.addEventListener('animationend', () => {
+//         visual.removeChild(beam);
+//     });
+// };
+
+// function createNote() {
+//     const note = document.createElement('img');
+//     visual.appendChild(note);
+//     note.src = './note/music-note.svg';
+//     note.style.animation = 'slide 2s linear';
+//     note.addEventListener('animationend', () => {
+//         visual.removeChild(note);
+//     });
+// };
