@@ -149,15 +149,15 @@ window.addEventListener("keydown",(e) => {
 
 
 //create tone notes
-// function createBeam() {
-//     const beam = document.createElement('img');
-//     visual.appendChild(beam);
-//     beam.src = './note/music-note-beamed.svg';
-//     beam.style.animation = 'slide 2s linear';
-//     beam.addEventListener('animationend', () => {
-//         visual.removeChild(beam);
-//     });
-// };
+function createBeam() {
+    const beam = document.createElement('img');
+    visual.appendChild(beam);
+    beam.src = './note/music-note-beamed.svg';
+    beam.style.animation = 'slide 2s linear';
+    beam.addEventListener('animationend', () => {
+        visual.removeChild(beam);
+    });
+};
 
 function createNote() {
     const note = document.createElement('img');
