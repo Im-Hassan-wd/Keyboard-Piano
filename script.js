@@ -159,12 +159,12 @@ window.addEventListener("keydown",(e) => {
 //     });
 // };
 
-// function createNote() {
-//     const note = document.createElement('img');
-//     visual.appendChild(note);
-//     note.src = './note/music-note.svg';
-//     note.style.animation = 'slide 2s linear';
-//     note.addEventListener('animationend', () => {
-//         visual.removeChild(note);
-//     });
-// };
+function createNote() {
+    const note = document.createElement('img');
+    visual.appendChild(note);
+    note.src = './note/music-note.svg';
+    note.style.animation = 'slide 2s linear';
+    note.addEventListener('animationend', () => {
+        visual.removeChild(note);
+    });
+};
