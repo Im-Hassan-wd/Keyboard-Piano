@@ -41,10 +41,6 @@
   margin: 40px 0;
 }
 
-input {
-  display: none;
-}
-
 @keyframes slide {
   from {
     left: 0%;
