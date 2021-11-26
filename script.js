@@ -1,7 +1,17 @@
 const tones = document.querySelectorAll('audio');
 const visual = document.querySelector(".visual");
+const input = document.querySelector("input");
 
 window.addEventListener("keydown",(e) => {
+	playSound(e);
+});
+
+input.addEventListener("keydown", (e) => {
+	playSound(e);
+});
+
+function playSound (e) {
+
     const key = e.key;
 
     tones.forEach((tone, i) => {
@@ -144,9 +154,7 @@ window.addEventListener("keydown",(e) => {
             break;
        }
     });
-});
-
-
+} 
 
 //create tone notes
 function createBeam() {
