@@ -15,8 +15,8 @@ function playSound (e) {
     const key = e.key;
 
     tones.forEach((tone, i) => {
+        
        switch (key) {
-
         case 'a': 
             tones[0].currentTime = 0;
             tones[0].play();
